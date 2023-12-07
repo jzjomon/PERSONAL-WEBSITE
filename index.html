@@ -70,9 +70,6 @@
                         <a class="scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
                         <a class="scroll" href="#contact">Contact</a>
                     </li>
                     <li class="login">
@@ -102,7 +99,7 @@
                 </h5>
                 <h3 data-text="I'm a Developer">I'm a Developer</h3>
                 <div class="ban-buttons mt-3" data-aos="fade-right">
-                    <a class="btn work scroll" href="#projects">My Work</a>
+                    <a class="btn work scroll" onclick="handleDownload()" download="JOMON_JOSE.pdf">Download Resume</a>
                     <a class="btn work scroll active" href="#contact">Here me</a>
                 </div>
 
@@ -307,7 +304,7 @@
     </section>
     <!-- //experience -->
     <!--gallery  -->
-    <section class="gallery py-md-5 py-3" id="projects">
+    <!-- <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
             <h4 class="sub-tittle-w3 text-uppercase text-center">View all</h4>
             <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">My Projects</h3>
@@ -421,10 +418,10 @@
             </div>
             <!-- //gallery container -->
         </div>
-    </section>
+    </section> -->
     <!-- //gallery -->
     <!--/stats-->
-    <section class="stats py-lg-5 py-4" id="stats">
+    <!-- <section class="stats py-lg-5 py-4" id="stats">
         <div class="gallery-inner container py-md-5 py-4">
             <div class="row mt-lg-5 stats-con text-white">
                 <div class="col-sm-3 col-6 stats_info counter_grid">
@@ -457,7 +454,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--//stats-->
     <!-- /testimonials -->
     <div class="testimonials py-lg-5 py-4" id="clients">
@@ -611,7 +608,7 @@
     </section>
     <!-- //Contact -->
     <!--/footer-->
-    <footer class="footer text-left">
+    <!-- <footer class="footer text-left">
         <div class="container py-4 py-sm-5">
 
             <div class="row py-sm-4 py-3">
@@ -701,7 +698,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!--//footer-->
 
     <!--model-forms-->
@@ -808,6 +805,17 @@
     </script>
     <!-- sticky nav bar-->
     <script>
+        const handleDownload = () => {
+            console.log("hi");
+            const url = './JOMON_JOSE.pdf'
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "JOMON_JOSE";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
         $(() => {
 
             //On Scroll Functionality
